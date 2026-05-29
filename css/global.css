@@ -1,0 +1,76 @@
+:root {
+  /* Cores de Fundo (Dark Mode) */
+  --bg-fundo:        #0a0815;
+  --bg-deep:         #0d0b1a;
+  --bg-mid:          #110e24;
+  --bg-card:         #16122e;
+  --bg-card-hover:   #1e1840;
+
+  /* Paleta Quente / Roxo / Neon */
+  --roxo:            #7c4dff;
+  --roxo-claro:      #a97eff;
+  --accent:          #c77dff;
+  --roxo-dim:        rgba(124, 77, 255, 0.15);
+  --roxo-neon:       rgba(124, 77, 255, 0.30);
+  --roxo-neon-lg:    rgba(124, 77, 255, 0.18);
+  --roxo-glow:     rgba(124, 77, 255, 0.35);
+
+  /* Cores de Texto */
+  --texto:           #ddd6f3;
+  --texto-alvaro:    #e8e0ff;
+  --texto-suave:     #7a6eaa;
+  --texto-muted:     #9585c8;
+  --white:           #ffffff;
+
+  /* Bordas e Elementos Visuais */
+  --borda:           rgba(124, 77, 255, 0.22);
+  --borda-hover:     rgba(124, 77, 255, 0.6);
+  --border-alvaro:   rgba(124, 77, 255, 0.25);
+  
+  /* Estrutura e Comportamento */
+  --radius-lg:       20px;
+  --radius-md:       12px;
+  --radius:   14px;
+  --radius-sm:       50px;
+  --transition:      0.35s ease;
+
+  /* Tipografia */
+  --fonte-principal: 'Sora', sans-serif;
+  --fonte-mono:      'Space Mono', monospace;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--fonte-principal);
+  background-color: var(--bg-fundo);
+  color: var(--texto);
+  line-height: 1.7;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+  position: relative;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul, ol {
+  list-style: none;
+}
