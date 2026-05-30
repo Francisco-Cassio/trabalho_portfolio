@@ -283,56 +283,27 @@
             pessoas. Algum projeto em mente? Entre em contato comigo
           </p>
 
-          <form
-            class="contato-form"
-            action="mailto:alvaromiguelrodrigues12@gmail.com"
-            method="get"
-            enctype="text/plain"
-          >
-            <div class="form-row">
-              <div class="form-group">
-                <label for="nome">Nome</label>
-                <input
-                  type="text"
-                  id="nome"
-                  name="nome"
-                  placeholder="Seu nome"
-                  required
-                />
-              </div>
-              <div class="form-group">
-                <label for="email">E-mail</label>
-                <input
-                  type="email"
-                  id="email"
-                  name="email"
-                  placeholder="seu@email.com"
-                  required
-                />
-              </div>
+        <form class="contato-form" action="mailto:alvaromiguelrodrigues12@gmail.com" method="post" enctype="text/plain">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="nome">Nome</label>
+              <input type="text" id="nome" name="Nome" placeholder="Seu nome" required />
             </div>
             <div class="form-group">
-              <label for="assunto">Assunto</label>
-              <input
-                type="text"
-                id="assunto"
-                name="assunto"
-                placeholder="Assunto da mensagem"
-                required
-              />
+              <label for="email">E-mail</label>
+              <input type="email" id="email" name="Email" placeholder="seu@email.com" required />
             </div>
-            <div class="form-group">
-              <label for="mensagem">Mensagem</label>
-              <textarea
-                id="mensagem"
-                name="mensagem"
-                rows="5"
-                placeholder="Escreva sua mensagem..."
-                required
-              ></textarea>
-            </div>
-            <button type="submit" class="btn-primary">Enviar Mensagem</button>
-          </form>
+          </div>
+          <div class="form-group">
+            <label for="assunto">Assunto</label>
+            <input type="text" id="assunto" name="Assunto" placeholder="Assunto da mensagem" required />
+          </div>
+          <div class="form-group">
+            <label for="mensagem">Mensagem</label>
+            <textarea id="mensagem" name="Mensagem" rows="5" placeholder="Escreva sua mensagem..." required></textarea>
+          </div>
+          <button type="submit" class="btn-primary">Enviar Mensagem</button>
+        </form>
 
           <div class="social-links">
             <a
