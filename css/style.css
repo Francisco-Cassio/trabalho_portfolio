@@ -1,0 +1,409 @@
+@keyframes float-dot {
+    0%   { transform: translateY(0) scale(1); }
+    50%  { transform: translateY(-30px) scale(1.05); }
+    100% { transform: translateY(0) scale(1); }
+}
+
+.site-header {
+    position: relative;
+    z-index: 10;
+    padding: 1.5rem 2rem;
+    border-bottom: 1px solid var(--borda);
+    background: rgba(10, 8, 21, 0.7);
+}
+
+.header-inner {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.header-logo {
+    font-family: var(--fonte-mono);
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--roxo-claro);
+    letter-spacing: -0.04em;
+}
+
+.header-sub {
+    font-size: 0.75rem;
+    color: var(--texto-suave);
+    font-family: var(--fonte-mono);
+    text-align: right;
+}
+
+.hero-intro {
+    position: relative;
+    z-index: 10;
+    text-align: center;
+    padding: 4rem 2rem 2rem;
+}
+
+.hero-titulo {
+    font-size: clamp(2.2rem, 6vw, 3.8rem);
+    font-weight: 700;
+    color: #fff;
+    line-height: 1.1;
+    margin-bottom: 1rem;
+}
+
+.texto-neon {
+    color: var(--roxo-claro);
+    text-shadow: 0 0 30px var(--roxo-neon), 0 0 60px var(--roxo-neon-lg);
+}
+
+.hero-desc {
+    font-size: clamp(0.88rem, 2vw, 1rem);
+    color: var(--texto-suave);
+    max-width: 420px;
+    margin: 0 auto;
+    line-height: 1.8;
+}
+
+#portfolios {
+    position: relative;
+    z-index: 10;
+    flex: 1;
+    padding: 2.5rem 2rem 4rem;
+}
+
+.cards-wrapper {
+    max-width: 860px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+
+.card {
+    position: relative;
+    background: var(--bg-card);
+    border: 1px solid var(--borda);
+    border-radius: var(--radius-lg);
+    padding: 2.5rem 2.5rem 2.5rem 3rem;
+    overflow: hidden;
+    transition: var(--transition);
+    cursor: pointer;
+}
+
+.card:hover {
+    background: var(--bg-card-hover);
+    border-color: var(--borda-hover);
+    transform: translateY(-4px);
+    box-shadow:
+        0 20px 60px rgba(0, 0, 0, 0.5),
+        0 0 40px var(--roxo-neon),
+        inset 0 1px 0 rgba(124, 77, 255, 0.2);
+}
+
+.card-numero {
+    position: absolute;
+    top: 1.4rem;
+    right: 1.8rem;
+    font-family: var(--fonte-mono);
+    font-size: 4rem;
+    font-weight: 700;
+    color: rgba(124, 77, 255, 0.06);
+    line-height: 1;
+    user-select: none;
+    pointer-events: none;
+    transition: var(--transition);
+}
+
+.card-brilho-lateral {
+    position: absolute;
+    top: 20%;
+    left: 0;
+    width: 4px;
+    height: 60%;
+    border-radius: 0 4px 4px 0;
+    background: linear-gradient(180deg, transparent, var(--roxo), transparent);
+    opacity: 0.6;
+    transition: var(--transition);
+}
+
+.card:hover .card-brilho-lateral {
+    height: 80%;
+    top: 10%;
+    opacity: 1;
+}
+
+.card-content {
+    display: flex;
+    align-items: center;
+    gap: 2.5rem;
+    position: relative;
+    z-index: 2;
+}
+
+.card-content--reverse {
+    flex-direction: row-reverse;
+}
+
+.card-foto-wrap {
+    position: relative;
+    flex-shrink: 0;
+}
+
+.card-foto {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 3px solid var(--borda);
+    transition: var(--transition);
+    position: relative;
+    z-index: 2;
+}
+
+.card-foto img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top center;
+    border-radius: 50%;
+    transition: transform 0.4s ease;
+}
+
+.card:hover .card-foto img {
+    transform: scale(1.06);
+}
+
+.card:hover .card-foto {
+    border-color: var(--roxo);
+    box-shadow: 0 0 0 4px var(--roxo-dim), 0 0 25px var(--roxo-neon);
+}
+
+.foto-anel {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 154px;
+    height: 154px;
+    border-radius: 50%;
+    border: 1.5px dashed var(--borda);
+    z-index: 1;
+    transition: var(--transition);
+    animation: spin-ring 14s linear infinite;
+}
+
+.card:hover .foto-anel {
+    border-color: var(--roxo-claro);
+    opacity: 0.5;
+}
+
+@keyframes spin-ring {
+    to { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+.card-info {
+    flex: 1;
+    min-width: 0;
+}
+
+.card-role {
+    font-family: var(--fonte-mono);
+    font-size: 0.72rem;
+    color: var(--roxo-claro);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-bottom: 0.4rem;
+}
+
+.card-nome {
+    font-size: clamp(1.6rem, 3vw, 2.2rem);
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 0.9rem;
+    line-height: 1.1;
+}
+
+.card-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.45rem;
+    margin-bottom: 1rem;
+}
+
+.card-tags li {
+    font-family: var(--fonte-mono);
+    font-size: 0.7rem;
+    color: var(--roxo-claro);
+    background: var(--roxo-dim);
+    border: 1px solid var(--borda);
+    border-radius: var(--radius-sm);
+    padding: 0.22rem 0.75rem;
+    transition: var(--transition);
+}
+
+.card:hover .card-tags li {
+    border-color: rgba(124, 77, 255, 0.5);
+    background: rgba(124, 77, 255, 0.2);
+}
+
+.card-bio {
+    font-size: 0.86rem;
+    color: var(--texto-suave);
+    line-height: 1.7;
+    margin-bottom: 1.4rem;
+    max-width: 400px;
+}
+
+.card-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    padding: 0.65rem 1.5rem;
+    background: linear-gradient(135deg, var(--roxo), #5c35cc);
+    color: #fff;
+    border-radius: var(--radius-sm);
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    transition: var(--transition);
+    box-shadow: 0 0 20px var(--roxo-neon);
+}
+
+.card-btn:hover {
+    transform: translateX(4px);
+    box-shadow: 0 0 35px var(--roxo-neon), 0 4px 20px rgba(0,0,0,0.4);
+}
+
+.btn-arrow {
+    display: inline-block;
+    transition: transform var(--transition);
+}
+
+.card-btn:hover .btn-arrow {
+    transform: translateX(4px);
+}
+
+.divisor {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1.2rem 2rem;
+}
+
+.divisor-linha {
+    flex: 1;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--borda), transparent);
+}
+
+.divisor-badge {
+    font-family: var(--fonte-mono);
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--texto-suave);
+    background: var(--bg-mid);
+    border: 1px solid var(--borda);
+    border-radius: 50%;
+    width: 38px;
+    height: 38px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.site-footer {
+    position: relative;
+    z-index: 10;
+    text-align: center;
+    padding: 1.5rem 2rem;
+    border-top: 1px solid var(--borda);
+    background: rgba(10, 8, 21, 0.6);
+}
+
+.site-footer p {
+    font-size: 0.78rem;
+    color: var(--texto-suave);
+    font-family: var(--fonte-mono);
+}
+
+@media (max-width: 720px) {
+    .card {
+        padding: 2rem 1.8rem 2rem 2rem;
+    }
+
+    .card-content,
+    .card-content--reverse {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .card-foto-wrap {
+        margin: 0 auto;
+    }
+
+    .card-tags {
+        justify-content: center;
+    }
+
+    .card-bio {
+        margin: 0 auto 1.4rem;
+    }
+
+    .card-brilho-lateral {
+        top: 0;
+        left: 20%;
+        width: 60%;
+        height: 4px;
+        border-radius: 0 0 4px 4px;
+        background: linear-gradient(90deg, transparent, var(--roxo), transparent);
+    }
+
+    .card:hover .card-brilho-lateral {
+        width: 80%;
+        left: 10%;
+        height: 4px;
+        top: 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-titulo {
+        font-size: 2rem;
+    }
+
+    .hero-intro {
+        padding: 3rem 1.5rem 1.5rem;
+    }
+
+    #portfolios {
+        padding: 1.5rem 1rem 3rem;
+    }
+
+    .card {
+        padding: 2rem 1.4rem;
+        border-radius: var(--radius-md);
+    }
+
+    .card-foto {
+        width: 110px;
+        height: 110px;
+    }
+
+    .foto-anel {
+        width: 130px;
+        height: 130px;
+    }
+
+    .card-nome {
+        font-size: 1.6rem;
+    }
+
+    .card-numero {
+        font-size: 3rem;
+    }
+
+    .divisor {
+        padding: 0.8rem 1rem;
+    }
+}

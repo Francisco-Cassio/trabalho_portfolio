@@ -3,10 +3,116 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfólio Pessoal Responsivo</title>
+    <title>Portfólios | Home</title>
+    <link rel="icon" type="image/png" href="img/favicon.png">
+    <link rel="stylesheet" href="css/global.css">
     <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Sora:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    
+    <header class="site-header">
+        <div class="header-inner">
+            <span class="header-logo">&lt;/&gt;</span>
+            <p class="header-sub">Programação para Internet I — IFPI</p>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero-intro">
+            <h1 class="hero-titulo">Portfólios <span class="texto-neon">Profissionais</span></h1>
+            <p class="hero-desc">
+                Selecione um dos cards abaixo para conhecer
+                o portfólio individual de cada desenvolvedor.
+            </p>
+        </section>
+
+        <section id="portfolios" aria-label="Portfólios da dupla">
+            <div class="cards-wrapper">
+
+                <article class="card card-cima">
+                    <div class="card-numero">01</div>
+                    <div class="card-brilho-lateral"></div>
+
+                    <div class="card-content">
+                        <div class="card-foto-wrap">
+                            <div class="card-foto">
+                                <img src="img/cassio.jpeg" alt="Foto de Cássio">
+                            </div>
+                            <div class="foto-anel"></div>
+                        </div>
+
+                        <div class="card-info">
+                            <p class="card-role">Desenvolvedor Full Stack</p>
+                            <h2 class="card-nome">Francisco de Cássio</h2>
+
+                            <ul class="card-tags">
+                                <li>HTML</li>
+                                <li>CSS</li>
+                                <li>JavaScript</li>
+                                <li>Python</li>
+                            </ul>
+
+                            <p class="card-bio">
+                                Estudante de ADS no IFPI, apaixonado por tecnologia
+                                e desenvolvimento de interfaces modernas.
+                            </p>
+
+                            <a href="portfolios/cassio.html" target="_self" class="card-btn">
+                                Ver Portfólio
+                                <span class="btn-arrow">&#8594;</span>
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                <div class="divisor" aria-hidden="true">
+                    <span class="divisor-linha"></span>
+                    <span class="divisor-badge"></span>
+                    <span class="divisor-linha"></span>
+                </div>
+
+                <article class="card card-baixo">
+                    <div class="card-numero">02</div>
+                    <div class="card-brilho-lateral"></div>
+
+                    <div class="card-content card-content--reverse">
+                        <div class="card-foto-wrap">
+                            <div class="card-foto">
+                                <img src="img/alvaro.jpeg" alt="Foto de Álvaro">
+                            </div>
+                            <div class="foto-anel"></div>
+                        </div>
+
+                        <div class="card-info">
+                            <p class="card-role">Desenvolvedor Full Stack</p>
+                            <h2 class="card-nome">Álvaro Miguel</h2>
+
+                            <ul class="card-tags">
+                                <li>Java</li>
+                                <li>Python</li>
+                                <li>JavaScript</li>
+                            </ul>
+
+                            <p class="card-bio">
+                                Estudante de ADS no IFPI, focado em criar
+                                soluções digitais acessíveis e bem estruturadas.
+                            </p>
+
+                            <a href="portfolios/alvaro.html" target="_self" class="card-btn">
+                                Ver Portfólio
+                                <span class="btn-arrow">&#8594;</span>
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <p>&copy; 2026 &mdash; Desenvolvido para a disciplina de Programação para Internet.</p>
+    </footer>
+
 </body>
 </html>
