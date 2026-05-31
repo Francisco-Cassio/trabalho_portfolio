@@ -49,7 +49,7 @@ O projeto publicado pode ser acessado diretamente através do link:
 
 ## 🎥 Link do Vídeo de Apresentação
 O vídeo explicativo detalhando o código-fonte, a estrutura das folhas de estilo e a responsividade em múltiplos dispositivos pode ser assistido aqui:  
-👉 [Assista ao vídeo de apresentação](LINK_DO_VIDEO)
+👉 [Assista ao vídeo de apresentação](https://drive.google.com/drive/folders/1zfLWGFbcnZYfFVt2yAwQGxx8s7-aHgAj?hl=pt-br)
 
 ---
 
