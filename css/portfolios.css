@@ -403,27 +403,55 @@ header {
 }
 
 .projetos { background: var(--bg-deep); }
-
 .proj-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1.4rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.4rem;
 }
 
 .proj-card {
-  background: var(--bg-card);
-  border: 1px solid var(--borda);
-  border-radius: var(--radius);
-  overflow: hidden;
-  transition: var(--transition);
-  display: flex;
-  flex-direction: column;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    border: 1px solid rgba(124, 77, 255, 0.22);   
+    border-radius: 14px;
+    background: #16122e;                           
+    transition: border-color 0.35s ease, box-shadow 0.35s ease, transform 0.35s ease;
+}
+
+.proj-img {
+    width: 100%;
+    height: 500px;        
+    flex-shrink: 0;
+    border-radius: var(--radius) var(--radius) 0 0;
+    overflow: hidden;
+}
+
+.proj-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top center;
+    display: block;
+    border-radius: 0;
+    transition: transform 0.4s ease;
 }
 
 .proj-card:hover {
-  transform: translateY(-5px);
-  border-color: var(--roxo);
-  box-shadow: 0 10px 35px var(--roxo-glow);
+    border-color: rgba(124, 77, 255, 0.6);
+    box-shadow: 0 0 30px rgba(124, 77, 255, 0.25);
+    transform: translateY(-4px);
+}
+
+.proj-card .proj-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.proj-card .proj-info .btn-outline {
+    margin-top: auto;
+    align-self: flex-start;
 }
 
 .proj-info {
@@ -629,6 +657,8 @@ header {
   .skills-grid { grid-template-columns: 1fr 1fr; }
 
   .proj-grid { grid-template-columns: 1fr; }
+  
+  .proj-img { height: 180px; }
 
   .form-row { grid-template-columns: 1fr; }
 
